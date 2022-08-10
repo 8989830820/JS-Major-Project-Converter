@@ -1,5 +1,4 @@
 
-
 function Swap() {
     let InputFrom = document.getElementById("from");
     let OutputTo = document.getElementById("to");
@@ -56,7 +55,7 @@ function checkInput(input, InputFrom, error) {
     for(let i = 0; i < input.length; i++) {
         if(input.charAt(i) == '.') {
             error.style.display = 'block';
-            error.textContent = "Error : I am extremely sorry. Given input number contains '.' and this page can only solve for numbers without decimal point."
+            error.textContent = 'Error';
             return false;
         }
     }
@@ -66,7 +65,7 @@ function checkInput(input, InputFrom, error) {
             for(let i = 0; i < input.length; i++) {
                 if(input.charAt(i) != 0 && input.charAt(i) != 1) {
                     error.style.display = 'block';
-                    error.textContent = `Error : Binary number does not include '${input.charAt(i)}'. Please enter only binary number or select different base for input number`;
+                    error.textContent = 'Error';
                     return false;
                 }
             }
